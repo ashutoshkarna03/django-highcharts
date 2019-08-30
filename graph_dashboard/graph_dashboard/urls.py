@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('sales/', include("sales_graph.urls")),
     path('', RedirectView.as_view(url='/sales/', permanent=True)),
+    path('show-table/', include("show_table.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
